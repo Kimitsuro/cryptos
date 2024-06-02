@@ -18,7 +18,7 @@ public class Exchange {
     private int coins;
     @ElementCollection
     private List<Integer> last_volume;
-
+    public Exchange(){}
     public Exchange(String name, double score, double volume24h, int markets, int coins, List<Integer> last_volume) {
         this.name = name;
         this.score = score;
