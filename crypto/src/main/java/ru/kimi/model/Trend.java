@@ -13,7 +13,7 @@ public class Trend {
     private String coin_name;
     private String coin_code;
     private double hour24;
-
+    public Trend(){}
     public Trend(String coin_name, String coin_code, double hour24) {
         this.coin_name = coin_name;
         this.coin_code = coin_code;
