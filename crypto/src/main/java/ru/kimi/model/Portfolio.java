@@ -22,7 +22,7 @@ public class Portfolio {
 
     private double current_volume_usd;
     private double current_volume_btc;
-
+    public Portfolio(){}
     public Portfolio(List<Coin> coins, List<Deal> deals, List<Double> profile_volume_usd, List<Double> profile_volume_btc, double current_volume_usd, double current_volume_btc) {
         this.coins = coins;
         this.deals = deals;
