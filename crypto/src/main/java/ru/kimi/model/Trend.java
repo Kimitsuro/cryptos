@@ -1,10 +1,15 @@
 //Trend.java
 package ru.kimi.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
+@Entity
 public class Trend {
+    @Id
+    private Long id;
     private String coin_name;
     private String coin_code;
     private double hour24;

@@ -2,9 +2,14 @@
 package ru.kimi.model;
 
 import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Data
+@Entity
 public class Deal {
+    @Id
+    private Long id;
     private String date;
     private String type;
     private double price;

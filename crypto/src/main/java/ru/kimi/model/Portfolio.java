@@ -1,12 +1,21 @@
 //Portfolio.java
 package ru.kimi.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 import java.util.List;
 
 @Data
+@Entity
 public class Portfolio {
+    @Id
+    private Long id;
+    @ManyToMany
     private List<Coin> coins;
+    @OneToMany
     private List<Deal> deals;
     private List<Double> profile_volume_usd;
     private List<Double> profile_volume_btc;

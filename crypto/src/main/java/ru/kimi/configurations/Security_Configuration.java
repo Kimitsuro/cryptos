@@ -25,8 +25,12 @@ public class Security_Configuration {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http.csrf().disable().authorizeHttpRequests((authorize) -> {
-            authorize.requestMatchers("/api/**").authenticated().anyRequest().permitAll();
+            authorize.requestMatchers("/api/**").authenticated()
+                    .requestMatchers("/h2-console/**").permitAll()
+                    .anyRequest().permitAll();
+
         }).httpBasic(Customizer.withDefaults());
+
         return http.build();
     }
 

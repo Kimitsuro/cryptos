@@ -1,11 +1,16 @@
 //Coin.java
 package ru.kimi.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
 import java.util.List;
 
 @Data
+@Entity
 public class Coin {
+    @Id
+    private Long id;
     private String coin_name;
     private String coin_code;
     private double price;
